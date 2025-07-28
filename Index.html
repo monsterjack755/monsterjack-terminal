@@ -1,0 +1,183 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AKIxEKA</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: radial-gradient(circle, rgba(0,0,255,0.3), rgba(0,0,139,0.6));
+      backdrop-filter: blur(8px);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: pink;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      text-align: center;
+    }h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 10px pink;
+}
+
+.box {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 2rem;
+  max-width: 600px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 20px rgba(255, 192, 203, 0.4);
+  margin-bottom: 2rem;
+}
+
+.line {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+button {
+  background: linear-gradient(145deg, pink, hotpink);
+  border: none;
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  color: white;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 0 10px hotpink;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px deeppink;
+}
+
+footer {
+  margin-top: 2rem;
+  font-size: 1rem;
+  opacity: 0.8;
+}
+
+  </style>
+</head>
+<body>
+  <h1>Ʌ͢ƙi͠  ✘  E͎к͜͡α 💓</h1>
+  <div class="box">
+    <div class="line" id="loveLine">💌 Monster Jack always loves Eka</div>
+    <button onclick="nextLine()">❤️ Next</button>
+  </div>
+  <footer>Created by Sihyun</footer>  <script>
+    const lines = [
+  "💘 Monster Jack can't help but fall for Eka over and over again",
+  "🌅 Eka's smile is the only sunrise Monster Jack needs",
+  "🎧 When Eka talks, Monster Jack forgets the world exists",
+  "🚀 Monster Jack would cross galaxies just to hear Eka giggle",
+  "☕ Eka, you're the caffeine in Monster Jack's soul",
+  "🦋 Monster Jack gets butterflies whenever Eka says his name",
+  "🕳️ Eka, your eyes are Monster Jack’s personal black hole",
+  "💤 Monster Jack dreams in the shape of Eka’s lips",
+  "⏳ Every second without Eka is a sin to Monster Jack",
+  "💓 Eka, Monster Jack’s heart does pushups when you’re near",
+  "💍 Monster Jack wants a forever that starts with Eka",
+  "📖 Eka, you’re the plot twist Monster Jack never saw coming",
+  "💋 Monster Jack’s lips are jealous of Eka’s pillow",
+  "😂 Eka’s laughter rewires Monster Jack’s entire brain",
+  "🎟️ Monster Jack’s flirting license only works on Eka",
+  "🌙 Eka, you’re Monster Jack’s favorite late-night sin",
+  "🎨 Monster Jack’s fingers crave Eka’s hair like poetry",
+  "💻 If kisses were code, Eka would crash Monster Jack’s system",
+  "✍️ Monster Jack wrote a million love lines, Eka is all of them",
+  "🎶 Eka, your voice turns Monster Jack into a soft playlist",
+  "💞 Monster Jack gets weak when Eka bites her lip",
+  "🔒 Eka’s face is the lock screen in Monster Jack’s heart",
+  "💉 Monster Jack is high on Eka, and there’s no rehab",
+  "📱 Eka’s name autocorrects every girl out of Monster Jack’s texts",
+  "🖋️ Monster Jack wants to tattoo Eka's smile on his soul",
+  "🌌 Eka, even Monster Jack’s shadows blush near you",
+  "🛏️ Monster Jack’s pillow misses Eka more than he does",
+  "☕ Eka’s texts are better than coffee for Monster Jack",
+  "🌅 Monster Jack wants Eka to be his 'good morning' and 'goodnight'",
+  "🌺 Eka’s scent is Monster Jack’s new religion",
+  "🔥 Monster Jack flirts with danger but loves only Eka",
+  "🎢 Eka’s mood swings are Monster Jack’s rollercoasters",
+  "💗 Monster Jack’s love life = Eka, Eka, and Eka",
+  "🎯 Eka's sarcasm is Monster Jack's favorite sport",
+  "✨ Monster Jack never believed in magic until Eka winked",
+  "🎭 Eka is Monster Jack’s daily dose of chaos and cuddles",
+  "📜 Monster Jack rewrites fate just to hold Eka’s hand",
+  "⚠️ Eka, your hair should come with a warning for Monster Jack",
+  "🎧 Monster Jack’s heart skips more beats than his playlist when Eka walks in",
+  "🔐 Eka’s lips hold the passwords to Monster Jack’s sanity",
+  "🍴 Monster Jack's favorite food? Eka’s mood",
+  "🔥 Eka’s sass turns Monster Jack’s bad day into desire",
+  "💭 Monster Jack is guilty of overthinking Eka’s smile",
+  "🤗 Eka’s hug is Monster Jack’s personal therapy session",
+  "🥶 Monster Jack’s bed feels cold without Eka’s chaos",
+  "😉 Eka, you flirt better without trying, and Monster Jack melts",
+  "😴 Monster Jack would fake sleep just to feel Eka kiss his forehead",
+  "🪞 Eka, even Monster Jack’s mirror reflects you now",
+  "🗣️ Monster Jack is fluent in Eka-ese",
+  "💇 Eka’s messy hair is Monster Jack’s idea of perfection",
+  "📖 Monster Jack doesn’t want a love story — just Eka",
+  "🙈 Eka, you make Monster Jack forget every ex’s name",
+  "🧓 Monster Jack wants to grow old making Eka blush",
+  "🔥 Eka’s tears burn Monster Jack more than fire",
+  "🙃 Monster Jack would lose arguments just to see Eka laugh",
+  "💅 Eka’s nails on Monster Jack’s back is a whole vibe",
+  "📲 Monster Jack’s ringtone should be Eka’s laughter",
+  "🌀 Eka’s absence makes Monster Jack poetic and mad",
+  "🧵 Monster Jack wants Eka’s name stitched on his stars",
+  "🔑 Eka, you’re the password to Monster Jack’s universe",
+  "💔 Monster Jack’s weakness is Eka's attitude",
+  "🔇 Eka’s silence speaks louder to Monster Jack than crowds",
+  "🤗 Monster Jack needs a daily hug from Eka — doctor’s orders",
+  "🧩 Eka’s chaos makes Monster Jack feel complete",
+  "🫦 Monster Jack’s lips are lonely without Eka’s name",
+  "🎞️ Eka’s every move plays in Monster Jack’s head like a reel",
+  "🎵 Monster Jack memorized Eka’s laugh like a favorite song",
+  "🤪 Eka, you’re the smile behind Monster Jack’s madness",
+  "🌕 Monster Jack flirts with the moon, but dreams of Eka",
+  "📖 Eka’s texts make Monster Jack rewrite fairy tales",
+  "💓 Monster Jack skipped a heartbeat when Eka first blinked",
+  "😚 Eka’s pout is Monster Jack’s biggest temptation",
+  "📷 Monster Jack’s favorite filter? Eka’s natural face",
+  "🔔 Eka, you’re the only notification Monster Jack cares about",
+  "💄 Monster Jack’s future wears Eka’s lipstick shade",
+  "📚 Eka’s chaos turns Monster Jack into a poet at 3AM",
+  "📝 Monster Jack’s diary only says 'Eka happened'",
+  "🧠 Eka, you broke Monster Jack’s logic — and he thanks you",
+  "🌠 Monster Jack stalks Eka’s smile in his dreams",
+  "👁️ Eka, you blink and Monster Jack falls harder",
+  "💭 Monster Jack’s daydreams include Eka’s mischief",
+  "😂 Eka’s sarcasm is Monster Jack’s favorite punchline",
+  "🔂 Monster Jack’s playlist has Eka’s laughter in loops",
+  "❓ Eka’s 'what ifs' keep Monster Jack up all night",
+  "💉 Monster Jack is addicted to Eka’s drama and dimples",
+  "💌 Eka’s lips deserve their own zip code in Monster Jack’s heart",
+  "😮‍💨 Monster Jack breathes deeper when Eka’s near",
+  "⚡ Eka, your attitude turns Monster Jack’s blood electric",
+  "📱 Monster Jack’s wallpaper, lock screen, and world — Eka",
+  "👕 Eka’s hoodie smells better when it’s on Monster Jack",
+  "🧙 Monster Jack whispers Eka’s name like it’s a secret spell",
+  "🎭 Eka, you’re the plot in Monster Jack’s every fantasy",
+  "💋 Monster Jack wants Eka’s lipstick stains on his forever",
+  "🖋️ Eka’s name sits like poetry in Monster Jack’s veins",
+  "😵‍💫 Monster Jack is broken beautifully by Eka’s smile",
+  "😴 Eka’s sleepy voice is Monster Jack’s lullaby",
+  "💨 Monster Jack wears memories of Eka like perfume",
+  "🎼 Eka’s name rhymes with everything Monster Jack needs",
+  "🤝 Monster Jack’s loyalty lives inside Eka’s smile",
+  "👋 Eka is Monster Jack’s favorite hello and hardest goodbye"
+];
+
+    let current = 0;
+
+    function nextLine() {
+      current = (current + 1) % lines.length;
+      document.getElementById('loveLine').innerText = lines[current];
+    }
+  </script></body>
+</html>
